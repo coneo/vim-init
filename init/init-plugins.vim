@@ -17,6 +17,7 @@ if !exists('g:bundle_group')
 	let g:bundle_group = ['basic', 'tags', 'enhanced', 'filetypes', 'textobj']
 	let g:bundle_group += ['tags', 'airline', 'nerdtree', 'ale', 'echodoc']
 	let g:bundle_group += ['leaderf']
+	let g:bundle_group += ['johnny']
 endif
 
 
@@ -515,6 +516,14 @@ if index(g:bundle_group, 'leaderf') >= 0
 		" ALT+n 匹配 buffer
 		noremap <m-n> :CtrlPBuffer<cr>
 	endif
+endif
+
+"----------------------------------------------------------------------
+" 自定义
+" a.vim: 切换头文件和cpp
+"----------------------------------------------------------------------
+if index(g:bundle_group, 'johnny') >= 0
+	Plug 'vim-scripts/a.vim'
 endif
 
 
