@@ -169,4 +169,13 @@ set wildignore+=*.gba,*.sfc,*.078,*.nds,*.smd,*.smc
 set wildignore+=*.linux2,*.win32,*.darwin,*.freebsd,*.linux,*.android
 
 
+"----------------------------------------------------------------------
+" by johnny
+"----------------------------------------------------------------------
 
+" 设置重新打开文件时能撤销之前的更改(undo)
+set undofile
+set undodir=~/.vim/undodir
+if !isdirectory(&undodir)
+  call mkdir(&undodir, 'p', 0700)
+endif
